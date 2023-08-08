@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Me from "@/public/IMG-0052.png";
+// import Me from "@/public/IMG-0052.png";
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
         <div className="flex flex-col items-center pt-8">
           <Image
             alt="Picture of leo"
-            src={Me}
+            src={"https://placehold.co/600x400"}
             className="h-48 w-48 rounded-full object-cover object-top"
           />
           <h3 className="pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight">
