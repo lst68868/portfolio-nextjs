@@ -65,8 +65,8 @@ export default function Home() {
 
         <div className="prose max-w-none prose-lg pt-8 pb-7 dark:prose-invert xl:col-span-2">
           <p>
-            Hello everyone. I'm Leo Tulchin, a software engineer and systems
-            administrator based in New York City.
+            Hello everyone. I'm Leo Tulchin, a creative writing major, software
+            engineer, and systems administrator based in New York City.
           </p>
           <p>
             I currently work for DialectaAI, building a language-learning
@@ -75,7 +75,7 @@ export default function Home() {
           <p>
             With my additional background as a systems administrator and
             strategic consultant to the United States federal Government, I
-            bring an expertise in client relations and business management to my
+            bring expertise in client relations and business management to my
             engineering work.
           </p>
           <p>
