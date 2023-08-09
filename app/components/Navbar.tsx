@@ -17,7 +17,7 @@ export default function Navbar() {
                 <div className="flex items-center">
                   <Link href="/">
                     <h1 className="text-2xl font-medium">
-                      Jan <span className="text-teal-500">Marshal</span>
+                      Leo <span className="text-teal-500">Tulchin</span>
                     </h1>
                   </Link>
                 </div>
