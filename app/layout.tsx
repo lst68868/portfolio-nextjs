@@ -8,7 +8,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Leo Tulchin",
-  description: "Portfolio built with next.js, typescript, and tailwind",
+  description:
+    "Portfolio built with next.js, typescript, tailwind, sanity, and planetscale",
 };
 
 export default function RootLayout({
