@@ -23,8 +23,9 @@ export default function Home() {
           <p className="text-gray-500 dark:text-gray-300 text-center">
             Click
             <a
-              href="https://docs.google.com/document/d/1N-iVjoFL9E3qi3YkVxwRuebd5it5VY1WUisPhMRqYhc/edit?usp=sharing"
+              href="public/Leo_Tulchin_Resume_Cleared.pdf"
               target="_blank"
+              rel="noopener noreferrer"
             >
               {" "}
               <b>here</b>
