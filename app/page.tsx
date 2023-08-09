@@ -21,7 +21,7 @@ export default function Home() {
             Leo Tulchin
           </h3>
           <p className="text-gray-500 dark:text-gray-300 text-center">
-            Hey my name is Leo and I am a Full Stack Developer
+            leostulchin@gmail.com
           </p>
 
           <div className="flex space-x-5 pt-6">
@@ -66,21 +66,25 @@ export default function Home() {
 
         <div className="prose max-w-none prose-lg pt-8 pb-7 dark:prose-invert xl:col-span-2">
           <p>
-            Hey everyone my name is Jan, I am 18 years old and i am a Full Stack
-            developer based in Hamburg/Germany
+            Hello everyone. I'm Leo Tulchin, I'm a software engineer and cloud
+            systems administrator based in New York City.
           </p>
           <p>
-            I love building Full Stack applications with React and to share them
-            on YouTube. When I discovered React, I was blown away by its
-            interactivity and speed. Its virtual DOM and efficient rendering
-            mechanisms allowed me to create dynamic user interfaces that
-            responded to user actions in real-time.
+            I currently work for DialectaAI, building a language-learning
+            platform with the power of AWS Lambdas and ASP.NET core. Previously,
+            I helped to build and manage Tulnoy Lumber's internal software
+            suite, including postgreSQL integration, a custom React interface,
+            and an automated, Python-powered inventory management system.
           </p>
           <p>
-            Building applications with Reactand sharing them on YouTube is my
-            ultimate combination of creative expression, technical expertise,
-            and community engagement. I am thrilled to continue this journey,
-            honing my skills, and inspiring others in the process.
+            Helping organizations to implement scalable, repeatable solutions to
+            everyday problems is my ultimate combination of creative expression,
+            technical expertise, and community engagement.
+          </p>
+          <p>
+            I'd love to learn more about what you do and how we can help one
+            another. Please use any of the buttons displayed to reach out at
+            your convenience.
           </p>
         </div>
       </div>
