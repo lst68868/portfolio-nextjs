@@ -32,7 +32,7 @@ export default async function Projects() {
     <div className="divide-y divide-gray-200 dark:divide-gray-700">
       <div className="space-y-2 pt-6 pb-8 md:space-y-5">
         <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-          All Projects
+          Fullstack Projects
         </h1>
       </div>
 
@@ -67,7 +67,7 @@ export default async function Projects() {
                 target="_blank"
                 className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-teal-500"
               >
-                Learn More!
+                Click here to visit!
                 <span className="block transition-all group-hover:ms-0.5">
                   &rarr;
                 </span>
