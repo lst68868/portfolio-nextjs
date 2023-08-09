@@ -8,7 +8,7 @@ import Themebutton from "./Themebutton";
 export default function Navbar() {
   let pathname = usePathname() || "/";
   return (
-    <Disclosure as="nav">
+    <Disclosure as="nav" className="sticky top-0">
       {({ open }) => (
         <>
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
