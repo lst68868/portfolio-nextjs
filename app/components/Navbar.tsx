@@ -34,7 +34,7 @@ export default function Navbar() {
                   >
                     Home
                   </Link>
-                  <Link
+                  {/* <Link
                     href="/guestbook"
                     prefetch
                     className={`${
@@ -44,7 +44,7 @@ export default function Navbar() {
                     }`}
                   >
                     Guestbook
-                  </Link>
+                  </Link> */}
                   <Link
                     href="/projects"
                     prefetch
