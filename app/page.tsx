@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Me from "@/public/leo_portfolio.jpg";
+import Me from "@/public/leo_portfolio_2.jpg";
 
 export default function Home() {
   return (
