@@ -14,21 +14,6 @@ export default {
       title: 'Small Overview',
     },
     {
-      name: 'paragraph1',
-      type: 'text',
-      title: 'Paragraph 1',
-    },
-    {
-      name: 'paragraph2',
-      type: 'text',
-      title: 'Paragraph 2',
-    },
-    {
-      name: 'paragraph3',
-      type: 'text',
-      title: 'Paragraph 3',
-    },
-    {
       name: 'image',
       type: 'image',
       title: 'Image',
@@ -47,6 +32,21 @@ export default {
       name: 'backendRepo',
       type: 'string',
       title: 'Backend Repo',
+    },
+    {
+      name: 'paragraph1',
+      type: 'string',
+      title: 'Paragraph 1',
+    },
+    {
+      name: 'paragraph2',
+      type: 'string',
+      title: 'Paragraph 2',
+    },
+    {
+      name: 'paragraph3',
+      type: 'string',
+      title: 'Paragraph 3',
     },
   ],
 }
