@@ -5,6 +5,8 @@ interface Data {
   title: string;
   overview: string;
   link: string;
+  githubRepo: string;
+  backendRepo: string;
   _id: string;
   imageUrl: string;
 }
@@ -12,10 +14,12 @@ interface Data {
 async function getProjects() {
   const query = `*[_type == "project"] {
     title,
-      overview,
-      link,
-      _id,
-      "imageUrl": image.asset->url
+    overview,
+    link,
+    githubRepo,
+    backendRepo,
+    _id,
+    "imageUrl": image.asset->url
   }`;
 
   const data = await client.fetch(query);
@@ -36,7 +40,7 @@ export default async function Projects() {
         </h1>
       </div>
 
-      <div className="grid gap-y-8 sm:gap-6  sm:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-10 pt-8">
+      <div className="grid gap-y-8 pt-8">
         {data.map((project) => (
           <article
             key={project._id}
@@ -58,7 +62,7 @@ export default async function Projects() {
                 </h3>
               </a>
 
-              <p className=" line-clamp-3 mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
+              <p className="line-clamp-3 mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
                 {project.overview}
               </p>
 
@@ -68,6 +72,28 @@ export default async function Projects() {
                 className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-teal-500"
               >
                 Click here to visit!
+                <span className="block transition-all group-hover:ms-0.5">
+                  &rarr;
+                </span>
+              </a>
+
+              <a
+                href={project.githubRepo}
+                target="_blank"
+                className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-teal-500"
+              >
+                GitHub Repo
+                <span className="block transition-all group-hover:ms-0.5">
+                  &rarr;
+                </span>
+              </a>
+
+              <a
+                href={project.backendRepo}
+                target="_blank"
+                className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-teal-500"
+              >
+                Backend Repo
                 <span className="block transition-all group-hover:ms-0.5">
                   &rarr;
                 </span>
