@@ -15,8 +15,9 @@ export default {
     },
     {
       name: 'instructions',
-      type: 'string',
+      type: 'array',
       title: 'Instructions',
+      of: [{ type: 'block' }],
     },
     {
       name: 'image',
