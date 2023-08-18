@@ -35,17 +35,17 @@ export default {
     },
     {
       name: 'paragraph1',
-      type: 'text',
+      type: 'string',
       title: 'Paragraph 1',
     },
     {
       name: 'paragraph2',
-      type: 'text',
+      type: 'string',
       title: 'Paragraph 2',
     },
     {
       name: 'paragraph3',
-      type: 'text',
+      type: 'string',
       title: 'Paragraph 3',
     },
   ],
