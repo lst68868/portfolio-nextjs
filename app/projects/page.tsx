@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { client } from "../lib/sanity";
-import BlockContent from "@sanity-project/block-content-to-react";
+// import BlockContent from "@sanity-project/block-content-to-react";
 
 interface Project {
   title: string;
