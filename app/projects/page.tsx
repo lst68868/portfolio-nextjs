@@ -1,11 +1,12 @@
 import Image from "next/image";
 import { client } from "../lib/sanity";
-// import BlockContent from "@sanity-project/block-content-to-react";
 
-interface Project {
+interface Data {
   title: string;
   overview: string;
-  instructions: any;
+  paragraph1: string;
+  paragraph2: string;
+  paragraph3: string;
   link: string;
   githubRepo: string;
   backendRepo: string;
@@ -17,7 +18,9 @@ async function getProjects() {
   const query = `*[_type == "project"] {
     title,
     overview,
-    instructions,
+    paragraph1,
+    paragraph2,
+    paragraph3,
     link,
     githubRepo,
     backendRepo,
@@ -30,10 +33,8 @@ async function getProjects() {
   return data;
 }
 
-export const revalidate = 60;
-
 export default async function Projects() {
-  const data: Project[] = await getProjects();
+  const data: Data[] = await getProjects();
 
   return (
     <div className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -42,7 +43,8 @@ export default async function Projects() {
           Fullstack Projects
         </h1>
       </div>
-      <div className="grid gap-y-8 pt-8">
+
+      <div className="grid gap-y-8 sm:gap-6  sm:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-10 pt-8">
         {data.map((project) => (
           <article
             key={project._id}
@@ -56,34 +58,45 @@ export default async function Projects() {
                 className="w-full h-full object-cover"
               />
             </div>
+
             <div className="p-4 sm:p-6">
               <a href={project.link} target="_blank">
                 <h3 className="text-lg font-medium text-gray-900 dark:text-white">
                   {project.title}
                 </h3>
               </a>
-              <p className="line-clamp-3 mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
+
+              <p className=" line-clamp-3 mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
                 {project.overview}
               </p>
-              <div className="mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
-                <BlockContent blocks={project.instructions} />
-              </div>
+
+              <p className="mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
+                {project.paragraph1}
+              </p>
+              <p className="mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
+                {project.paragraph2}
+              </p>
+              <p className="mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
+                {project.paragraph3}
+              </p>
+
               <a
                 href={project.link}
                 target="_blank"
                 className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-teal-500"
               >
-                Click here to visit!
+                Click here to visit!{" "}
                 <span className="block transition-all group-hover:ms-0.5">
                   &rarr;
                 </span>
               </a>
+
               <a
                 href={project.githubRepo}
                 target="_blank"
                 className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-teal-500"
               >
-                GitHub Repo
+                GitHub Repo{" "}
                 <span className="block transition-all group-hover:ms-0.5">
                   &rarr;
                 </span>
@@ -93,7 +106,7 @@ export default async function Projects() {
                 target="_blank"
                 className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-teal-500"
               >
-                Backend Repo
+                Backend Repo{" "}
                 <span className="block transition-all group-hover:ms-0.5">
                   &rarr;
                 </span>

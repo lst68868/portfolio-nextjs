@@ -11,13 +11,22 @@ export default {
     {
       name: 'overview',
       type: 'string',
-      title: 'Before You Click',
+      title: 'Small Overview',
     },
     {
-      name: 'instructions',
-      type: 'array',
-      title: 'Instructions',
-      of: [{ type: 'block' }],
+      name: 'paragraph1',
+      type: 'text',
+      title: 'Paragraph 1',
+    },
+    {
+      name: 'paragraph2',
+      type: 'text',
+      title: 'Paragraph 2',
+    },
+    {
+      name: 'paragraph3',
+      type: 'text',
+      title: 'Paragraph 3',
     },
     {
       name: 'image',
