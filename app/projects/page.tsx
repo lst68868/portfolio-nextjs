@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { client } from "../lib/sanity";
 
-interface Data {
+interface Project {
   title: string;
   overview: string;
+  instructions: string;
   link: string;
   githubRepo: string;
   backendRepo: string;
@@ -15,6 +16,7 @@ async function getProjects() {
   const query = `*[_type == "project"] {
     title,
     overview,
+    instructions,
     link,
     githubRepo,
     backendRepo,
@@ -30,7 +32,7 @@ async function getProjects() {
 export const revalidate = 60;
 
 export default async function Projects() {
-  const data: Data[] = await getProjects();
+  const data: Project[] = await getProjects();
 
   return (
     <div className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -64,6 +66,10 @@ export default async function Projects() {
 
               <p className="line-clamp-3 mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
                 {project.overview}
+              </p>
+
+              <p className="mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
+                {project.instructions}
               </p>
 
               <a

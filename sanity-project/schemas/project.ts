@@ -14,6 +14,11 @@ export default {
       title: 'Before You Click',
     },
     {
+      name: 'instructions',
+      type: 'string',
+      title: 'Instructions',
+    },
+    {
       name: 'image',
       type: 'image',
       title: 'Image',
