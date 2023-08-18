@@ -1,10 +1,11 @@
 import Image from "next/image";
 import { client } from "../lib/sanity";
+import BlockContent from "@sanity-project/block-content-to-react";
 
 interface Project {
   title: string;
   overview: string;
-  instructions: string;
+  instructions: any;
   link: string;
   githubRepo: string;
   backendRepo: string;
@@ -41,7 +42,6 @@ export default async function Projects() {
           Fullstack Projects
         </h1>
       </div>
-
       <div className="grid gap-y-8 pt-8">
         {data.map((project) => (
           <article
@@ -56,22 +56,18 @@ export default async function Projects() {
                 className="w-full h-full object-cover"
               />
             </div>
-
             <div className="p-4 sm:p-6">
               <a href={project.link} target="_blank">
                 <h3 className="text-lg font-medium text-gray-900 dark:text-white">
                   {project.title}
                 </h3>
               </a>
-
               <p className="line-clamp-3 mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
                 {project.overview}
               </p>
-
-              <p className="mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
-                {project.instructions}
-              </p>
-
+              <div className="mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
+                <BlockContent blocks={project.instructions} />
+              </div>
               <a
                 href={project.link}
                 target="_blank"
@@ -82,7 +78,6 @@ export default async function Projects() {
                   &rarr;
                 </span>
               </a>
-
               <a
                 href={project.githubRepo}
                 target="_blank"
@@ -93,7 +88,6 @@ export default async function Projects() {
                   &rarr;
                 </span>
               </a>
-
               <a
                 href={project.backendRepo}
                 target="_blank"
