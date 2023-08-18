@@ -45,13 +45,13 @@ export default async function Projects() {
       </div>
 
       <div className="gap-y-8 pt-8">
-        {" "}
-        {/* Updated grid classes */}
         {data.map((project) => (
           <article
             key={project._id}
-            className="overflow-hidden dark:border-zinc-600 rounded-lg border border-gray-100 bg-white shadow-lg dark:bg-black dark:shadow-gray-700 shadow-teal-100"
+            className="overflow-hidden dark:border-zinc-600 rounded-lg border border-gray-100 bg-white shadow-lg dark:bg-black dark:shadow-gray-700 shadow-teal-100 mb-8"
           >
+            {" "}
+            {/* Added bottom margin */}
             <div className="h-56 w-full relative">
               <Image
                 fill
@@ -60,7 +60,6 @@ export default async function Projects() {
                 className="w-full h-full object-cover"
               />
             </div>
-
             <div className="p-4 sm:p-6">
               <a href={project.link} target="_blank">
                 <h3 className="text-lg font-medium text-gray-900 dark:text-white">
