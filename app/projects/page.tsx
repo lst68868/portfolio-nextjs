@@ -44,7 +44,9 @@ export default async function Projects() {
         </h1>
       </div>
 
-      <div className="grid gap-y-8 sm:gap-6  sm:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-10 pt-8">
+      <div className="gap-y-8 pt-8">
+        {" "}
+        {/* Updated grid classes */}
         {data.map((project) => (
           <article
             key={project._id}
