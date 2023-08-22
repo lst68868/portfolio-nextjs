@@ -10,7 +10,8 @@ export default {
     },
     {
       name: 'overview',
-      type: 'text',
+      type: 'array',
+      of: [{ type: 'block' }],
       title: 'Small Overview',
     },
     {

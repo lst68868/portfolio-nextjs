@@ -1,12 +1,13 @@
 import Image from "next/image";
 import { client } from "../lib/sanity";
+import BlockContent from "@sanity/block-content-to-react";
 
 interface Data {
   title: string;
-  overview: string; // Assuming overview as a single string
+  overview: any[]; // Overview as block content
   link: string;
-  githubRepo: string;
-  backendRepo: string;
+  githubRepo?: string; // Optional link
+  backendRepo?: string; // Optional link
   _id: string;
   imageUrl: string;
 }
@@ -42,7 +43,7 @@ export default async function Projects() {
         {data.map((project) => (
           <article
             key={project._id}
-            className="dark:border-zinc-600 rounded-lg border border-gray-100 bg-white shadow-lg dark:bg-black dark:shadow-gray-700 shadow-teal-100 mb-8"
+            className="rounded-lg border border-gray-100 bg-white shadow-lg dark:bg-black dark:shadow-gray-700 shadow-teal-100 mb-8"
           >
             <div className="h-56 w-full relative">
               <Image
@@ -60,9 +61,10 @@ export default async function Projects() {
                 </h3>
               </a>
 
-              <p className="mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
-                {project.overview}
-              </p>
+              <div className="mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
+                <BlockContent blocks={project.overview} />{" "}
+                {/* Render overview as block content */}
+              </div>
 
               <a
                 href={project.link}
@@ -75,27 +77,31 @@ export default async function Projects() {
                 </span>
               </a>
 
-              <a
-                href={project.githubRepo}
-                target="_blank"
-                className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-teal-500"
-              >
-                GitHub Repo{" "}
-                <span className="block transition-all group-hover:ms-0.5">
-                  &rarr;
-                </span>
-              </a>
+              {project.githubRepo && (
+                <a
+                  href={project.githubRepo}
+                  target="_blank"
+                  className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-teal-500"
+                >
+                  GitHub Repo{" "}
+                  <span className="block transition-all group-hover:ms-0.5">
+                    &rarr;
+                  </span>
+                </a>
+              )}
 
-              <a
-                href={project.backendRepo}
-                target="_blank"
-                className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-teal-500"
-              >
-                Backend Repo{" "}
-                <span className="block transition-all group-hover:ms-0.5">
-                  &rarr;
-                </span>
-              </a>
+              {project.backendRepo && (
+                <a
+                  href={project.backendRepo}
+                  target="_blank"
+                  className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-teal-500"
+                >
+                  Backend Repo{" "}
+                  <span className="block transition-all group-hover:ms-0.5">
+                    &rarr;
+                  </span>
+                </a>
+              )}
             </div>
           </article>
         ))}
