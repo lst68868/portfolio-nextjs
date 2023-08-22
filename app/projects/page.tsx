@@ -3,10 +3,7 @@ import { client } from "../lib/sanity";
 
 interface Data {
   title: string;
-  overview: string;
-  paragraph1: string;
-  paragraph2: string;
-  paragraph3: string;
+  overview: string; // Assuming overview as a single string
   link: string;
   githubRepo: string;
   backendRepo: string;
@@ -18,9 +15,6 @@ async function getProjects() {
   const query = `*[_type == "project"] {
     title,
     overview,
-    paragraph1,
-    paragraph2,
-    paragraph3,
     link,
     githubRepo,
     backendRepo,
@@ -66,18 +60,8 @@ export default async function Projects() {
                 </h3>
               </a>
 
-              <p className=" line-clamp-3 mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
+              <p className="mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
                 {project.overview}
-              </p>
-
-              <p className="mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
-                {project.paragraph1}
-              </p>
-              <p className="mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
-                {project.paragraph2}
-              </p>
-              <p className="mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
-                {project.paragraph3}
               </p>
 
               <a
@@ -101,6 +85,7 @@ export default async function Projects() {
                   &rarr;
                 </span>
               </a>
+
               <a
                 href={project.backendRepo}
                 target="_blank"

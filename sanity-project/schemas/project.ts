@@ -10,7 +10,7 @@ export default {
     },
     {
       name: 'overview',
-      type: 'string',
+      type: 'text',
       title: 'Small Overview',
     },
     {
@@ -32,21 +32,6 @@ export default {
       name: 'backendRepo',
       type: 'string',
       title: 'Backend Repo',
-    },
-    {
-      name: 'paragraph1',
-      type: 'string',
-      title: 'Paragraph 1',
-    },
-    {
-      name: 'paragraph2',
-      type: 'string',
-      title: 'Paragraph 2',
-    },
-    {
-      name: 'paragraph3',
-      type: 'string',
-      title: 'Paragraph 3',
     },
   ],
 }
