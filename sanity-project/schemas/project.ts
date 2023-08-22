@@ -34,5 +34,11 @@ export default {
       type: 'string',
       title: 'Backend Repo',
     },
+    {
+      name: 'priority',
+      type: 'number',
+      title: 'Priority',
+      description: 'Enter a number to prioritize this project. Lower numbers will appear first.'
+    }
   ],
 }
