@@ -42,7 +42,7 @@ export default async function Projects() {
         {data.map((project) => (
           <article
             key={project._id}
-            className="overflow-hidden dark:border-zinc-600 rounded-lg border border-gray-100 bg-white shadow-lg dark:bg-black dark:shadow-gray-700 shadow-teal-100 mb-8"
+            className="dark:border-zinc-600 rounded-lg border border-gray-100 bg-white shadow-lg dark:bg-black dark:shadow-gray-700 shadow-teal-100 mb-8"
           >
             <div className="h-56 w-full relative">
               <Image
