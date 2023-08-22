@@ -13,7 +13,7 @@ interface Data {
 }
 
 async function getProjects() {
-  const query = `*[_type == "project"] {
+  const query = `*[_type == "project"] | order(priority) {
     title,
     overview,
     link,
