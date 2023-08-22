@@ -62,7 +62,7 @@ export default async function Projects() {
               </a>
 
               <div className="mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
-                <BlockContent blocks={project.overview} />{" "}
+                <BlockContent blocks={project.overview} />
                 {/* Render overview as block content */}
               </div>
 
